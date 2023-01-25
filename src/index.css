@@ -1,0 +1,33 @@
+:root {
+  --avatar-size: 150px;
+}
+
+body {
+  background: #34383b;
+}
+
+/*
+.hexagon {
+  display: inline-grid;
+  grid-template-columns: repeat(var(--cols), var(--avatar-size));
+  grid-template-rows: repeat(var(--rows), var(--avatar-size));
+  border: 5px solid white;
+  gap: 5px;
+}
+*/
+
+.hexagon {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: calc(var(--avatar-size) * 5);
+  height: calc(var(--avatar-size) * 5);
+  border: 5px solid white;
+}
+
+.item {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background: black;
+  clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+  background-image: var(--image);
+}
